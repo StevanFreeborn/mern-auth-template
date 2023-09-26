@@ -4,8 +4,14 @@
   "description": "A starter template for using JWT authentication with a MERN stack.",
   "type": "module",
   "scripts": {},
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "mern",
+    "auth",
+    "jwt",
+    "authentication",
+    "template"
+  ],
+  "author": "Stevan Freeborn",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^16.3.1",
