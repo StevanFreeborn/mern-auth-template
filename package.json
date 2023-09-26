@@ -2,6 +2,7 @@
   "name": "mern_auth_template",
   "version": "1.0.0",
   "description": "A starter template for using JWT authentication with a MERN stack.",
+  "type": "module",
   "scripts": {},
   "keywords": [],
   "author": "",
