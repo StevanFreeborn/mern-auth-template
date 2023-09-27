@@ -6,7 +6,9 @@
   "scripts": {
     "build": "npx tsc",
     "start:server": "node dist/server/index.js",
-    "dev:server": "concurrently \"npx tsc -w\" \"nodemon dist/server/index.js\""
+    "dev:server": "concurrently \"npx tsc -w\" \"nodemon dist/server/index.js\"",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write ."
   },
   "keywords": [
     "mern",
@@ -30,8 +32,14 @@
     "@types/node": "^20.7.0",
     "@types/swagger-jsdoc": "^6.0.1",
     "@types/swagger-ui-express": "^4.1.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
     "concurrently": "^8.2.1",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   }
 }
