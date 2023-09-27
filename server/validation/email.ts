@@ -1,6 +1,6 @@
 import * as emailValidator from 'email-validator';
 
-export function isValidateEmail(email: string) {
+export function isValidEmail(email: string) {
   return emailValidator.validate(email);
 }
 

@@ -1,4 +1,4 @@
-export function isValidatePassword(password: string) {
+export function isValidPassword(password: string) {
   const passwordRegex =
     /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
   return passwordRegex.test(password);

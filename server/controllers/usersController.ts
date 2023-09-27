@@ -1,10 +1,10 @@
 import type { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import { Users } from '../models/user.js';
-import { invalidEmailMessage, isValidateEmail } from '../validation/email.js';
+import { invalidEmailMessage, isValidEmail } from '../validation/email.js';
 import {
   invalidPasswordMessage,
-  isValidatePassword,
+  isValidPassword,
 } from '../validation/password.js';
 
 export async function logUserIn(req: Request, res: Response) {
@@ -33,12 +33,12 @@ export async function registerUser(req: Request, res: Response) {
       throw new Error(`${key} is required`);
     }
 
-    if (key === 'password' && isValidatePassword(value) === false) {
+    if (key === 'password' && isValidPassword(value) === false) {
       res.status(400);
       throw new Error(invalidPasswordMessage);
     }
 
-    if (key === 'email' && isValidateEmail(value) === false) {
+    if (key === 'email' && isValidEmail(value) === false) {
       res.status(400);
       throw new Error(invalidEmailMessage);
     }

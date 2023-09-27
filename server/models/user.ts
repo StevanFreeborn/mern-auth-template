@@ -1,9 +1,9 @@
 import bcrypt from 'bcrypt';
 import mongoose from 'mongoose';
-import { invalidEmailMessage, isValidateEmail } from '../validation/email.js';
+import { invalidEmailMessage, isValidEmail } from '../validation/email.js';
 import {
   invalidPasswordMessage,
-  isValidatePassword,
+  isValidPassword,
 } from '../validation/password.js';
 
 const schema = new mongoose.Schema({
@@ -14,7 +14,7 @@ const schema = new mongoose.Schema({
     trim: true,
     lowercase: true,
     validate: {
-      validator: isValidateEmail,
+      validator: isValidEmail,
       message: invalidEmailMessage,
     },
   },
@@ -22,7 +22,7 @@ const schema = new mongoose.Schema({
     type: String,
     required: [true, 'password is required'],
     validate: {
-      validator: isValidatePassword,
+      validator: isValidPassword,
       message: invalidPasswordMessage,
     },
   },
