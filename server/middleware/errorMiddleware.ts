@@ -10,6 +10,7 @@ export function error(
   err: Error & { kind: string },
   req: Request,
   res: Response,
+  // eslint-disable-next-line no-unused-vars
   next: NextFunction
 ) {
   let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
